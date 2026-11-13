@@ -1,0 +1,67 @@
+<!-- Nama : Pelita Rut Gratia Tambunan -->
+ <!-- NIM : 41426016 -->
+  <!-- Program Studi : D4-Teknologi Rekayasa Perangkat Lunak -->
+
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pendaftaran Kegiatan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Pendaftaran Kegiatan</h1>
+        <figure>
+            <img src="sor.jpeg" alt="Pintu masuk aula berada di sisi timur gedung" width="200">
+            <figcaption>Lokasi kegiatan: aula kampus.</figcaption>
+        </figure>
+        <p>Kolom bertanda wajib harus diisi.</p>
+        <form action="get" method="get">
+            <label for="nama">Nama lengkap (wajib)</label>
+            <input id="nama" name="nama" autocomplete="name" required>
+            <label for="kode">Kode peserta (wajib)</label>
+            <input id="kode" name="kode" type="text" inputmode="numeric" pattern="[0-9]{6}" aria-describedby="kode-help"
+                required>
+            <label for="phone">Nomor Telepon:</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+            <label for="email">Email (wajib)</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <label for="tickets">Jumlah Tiket:</label>
+            <input type="number" id="tickets" name="tickets" min="1" max="5" step="1">
+            <label for="prodi">Program studi (wajib)</label>
+
+            <select id="prodi" name="prodi" required>
+                <option value="">Pilih program studi</option>
+                <option value="trpl">D4 TRPL</option>
+                <option value="ti">D3 Teknologi Informasi</option>
+            </select>
+
+            <fieldset>
+                <legend>Mode kehadiran (wajib)</legend>
+                <input id="luring" name="mode" type="radio" value="luring" required>
+                <label for="luring">Luring</label>
+                <input id="daring" name="mode" type="radio" value="daring">
+                <label for="daring">Daring</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Minat Topik</legend>
+                <input id="topik_html" name="topik" type="checkbox" value="html">
+                <label for="topik_html">HTML</label>
+
+                <input id="topik_aksesibilitas" name="topik" type="checkbox" value="aksesibilitas">
+                <label for="topik_aksesibilitas">Aksesibilitas</label>
+            </fieldset>
+
+            <label for="catatan">Catatan (opsional)</label>
+            <textarea id="catatan" name="catatan" rows="4" maxlength="300"></textarea>
+            <button type="submit">Daftar</button>
+        </form>
+    </main>
+</body>
+
+</html>
